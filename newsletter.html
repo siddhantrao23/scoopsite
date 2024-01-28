@@ -1,0 +1,38 @@
+---
+title: Submit Newsletters 
+layout: page
+---
+{}
+<div class="center">
+  <form action="/admin/newsletters" method="post">
+    <label>Title
+    <textarea
+      placeholder="Enter the newsletter title"
+      name="text_content"
+      rows="1"
+      cols="50"
+    ></textarea>
+    </label>
+    <br>
+    <label>Plain Text Content
+    <textarea
+      placeholder="Enter the content in plain text"
+      name="text_content"
+      rows="20"
+      cols="50"
+    ></textarea>
+    </label>
+    <br>
+    <label>HTML Content
+    <textarea
+      placeholder="Enter the content in HTML format"
+      name="html_content"
+      rows="20"
+      cols="50"
+    ></textarea>
+    </label>
+    <br>
+    <input hidden type="text" name="idempotency_key" value="{idempotency_key}">
+    <button type="submit">Publish Newsletter</button>
+  </form>
+</div>
